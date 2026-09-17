@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Ciclo Tóxico Termina Aquí</title>
+<meta name="description" content="Ebook de sanación emocional: aprende a cerrar ciclos, soltar el apego y recuperar tu libertad emocional. 75% de descuento por pre-lanzamiento.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,900;1,500;1,600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#241729;
+    --ink-soft:#5b4a63;
+    --cream:#FBF2E2;
+    --cream-2:#F4E6CA;
+    --parchment:#EAD8B4;
+    --gold:#C08A3E;
+    --gold-light:#E7C48B;
+    --gold-dark:#8C632A;
+    --purple:#3B1E73;
+    --purple-deep:#241246;
+    --purple-ink:#170A31;
+    --wine:#7A1220;
+    --wine-dark:#4B0A12;
+    --wine-light:#9C1B29;
+    --line:rgba(36,23,41,0.12);
+    color-scheme: light;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Montserrat',ui-sans-serif,system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{max-width:100%;}
+  [hidden]{display:none!important;}
+
+  h1,h2,h3{
+    font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+    margin:0;
+    text-wrap:balance;
+    color:var(--ink);
+  }
+
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding-inline:20px;
+  }
+
+  a{color:inherit;}
+
+  /* ---------- Topbar ---------- */
+  .topbar{
+    padding-block:18px;
+    border-bottom:1px solid var(--line);
+    background:var(--cream);
+  }
+  .topbar .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+  }
+  .brand{
+    font-family:'Playfair Display',serif;
+    font-weight:700;
+    font-size:1.15rem;
+    letter-spacing:0.04em;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .brand .dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--wine);
+    display:inline-block;
+  }
+  .top-note{
+    font-size:0.72rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    font-weight:600;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn-cta{
+    --pad-y:16px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:var(--pad-y) 34px;
+    border-radius:999px;
+    background:linear-gradient(135deg, var(--wine-light), var(--wine-dark));
+    color:#FBF0E4;
+    text-decoration:none;
+    font-family:'Montserrat',sans-serif;
+    font-weight:700;
+    font-size:1rem;
+    letter-spacing:0.02em;
+    border:1px solid var(--gold-light);
+    box-shadow:0 10px 24px -8px rgba(122,18,32,0.55), inset 0 1px 0 rgba(255,255,255,0.12);
+    transition:transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+    cursor:pointer;
+    text-align:center;
+    line-height:1.3;
+  }
+  .btn-cta:hover{
+    transform:translateY(-2px);
+    box-shadow:0 14px 30px -8px rgba(122,18,32,0.65), inset 0 1px 0 rgba(255,255,255,0.16);
+    filter:brightness(1.04);
+  }
+  .btn-cta:focus-visible{
+    outline:3px solid var(--gold);
+    outline-offset:3px;
+  }
+  .btn-cta svg{flex-shrink:0;}
+  .btn-cta.btn-block{width:100%;}
+  .btn-sub{
+    display:block;
+    text-align:center;
+    margin-top:10px;
+    font-size:0.78rem;
+    color:var(--ink-soft);
+    letter-spacing:0.02em;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    background:radial-gradient(120% 140% at 18% -10%, var(--purple) 0%, var(--purple-deep) 48%, var(--purple-ink) 100%);
+    color:#F3E9F7;
+    padding-block:64px 84px;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      radial-gradient(2px 2px at 20% 30%, rgba(230,196,139,0.35) 0, transparent 3px),
+      radial-gradient(2px 2px at 80% 20%, rgba(230,196,139,0.25) 0, transparent 3px),
+      radial-gradient(1.5px 1.5px at 60% 70%, rgba(230,196,139,0.3) 0, transparent 3px),
+      radial-gradient(1.5px 1.5px at 30% 85%, rgba(230,196,139,0.2) 0, transparent 3px);
+    pointer-events:none;
+  }
+  .hero .wrap{
+    position:relative;
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:48px;
+    align-items:center;
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:0.72rem;
+    font-weight:700;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--gold-light);
+    border:1px solid rgba(230,196,139,0.4);
+    padding:7px 14px;
+    border-radius:999px;
+    background:rgba(230,196,139,0.08);
+  }
+  .hero h1{
+    color:#FBF2E2;
+    font-size:clamp(2.1rem, 4.2vw, 3.1rem);
+    line-height:1.15;
+    font-weight:700;
+    margin-top:20px;
+  }
+  .hero .lead{
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:clamp(1.3rem, 2.4vw, 1.7rem);
+    color:var(--gold-light);
+    margin-top:14px;
+  }
+  .hero p.desc{
+    margin-top:18px;
+    font-size:1.02rem;
+    line-height:1.7;
+    color:#DCC9E4;
+    max-width:46ch;
+  }
+  .hero .question{
+    margin-top:22px;
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+    font-size:1.15rem;
+    color:#F3E9F7;
+    border-left:3px solid var(--gold);
+    padding-left:16px;
+  }
+  .badges{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:26px;
+  }
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    font-size:0.78rem;
+    font-weight:600;
+    padding:8px 14px;
+    border-radius:999px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(230,196,139,0.28);
+    color:#EFE1DF;
+  }
+  .badge svg{width:15px;height:15px;flex-shrink:0;color:var(--gold-light);}
+  .hero .cta-row{margin-top:30px;}
+
+  /* Hero visual */
+  .hero-visual{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .ring-orbit{
+    animation:spin 46s linear infinite;
+    transform-origin:center;
+  }
+  @media (prefers-reduced-motion:reduce){
+    .ring-orbit{animation:none;}
+  }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+
+  /* ---------- Sections generic ---------- */
+  .section{
+    padding-block:68px;
+  }
+  .section-cream{background:var(--cream);}
+  .section-parchment{background:var(--cream-2);}
+  .section-dark{
+    background:linear-gradient(180deg, var(--purple-deep), var(--purple-ink));
+    color:#F3E9F7;
+  }
+  .kicker{
+    font-size:0.74rem;
+    font-weight:700;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--wine);
+  }
+  .section-dark .kicker{color:var(--gold-light);}
+  .section h2{
+    font-size:clamp(1.7rem, 3vw, 2.3rem);
+    margin-top:10px;
+    max-width:32ch;
+  }
+  .section .section-head{
+    margin-bottom:40px;
+  }
+  .section .section-head.center{
+    text-align:center;
+    margin-inline:auto;
+  }
+  .section .section-head p{
+    margin-top:12px;
+    color:var(--ink-soft);
+    max-width:56ch;
+    line-height:1.7;
+  }
+  .section-dark .section-head p{color:#CDBBD5;}
+
+  /* ---------- Pillars ---------- */
+  .pillars{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+  }
+  .pillar-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:30px 26px;
+    box-shadow:0 18px 40px -28px rgba(36,23,41,0.35);
+  }
+  .pillar-num{
+    font-family:'Playfair Display',serif;
+    font-weight:700;
+    font-size:0.85rem;
+    color:var(--gold-dark);
+    letter-spacing:0.06em;
+  }
+  .pillar-icon{
+    width:46px;height:46px;
+    border-radius:50%;
+    background:var(--cream-2);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:16px;
+    color:var(--wine);
+  }
+  .pillar-card h3{
+    font-size:1.18rem;
+    margin-top:4px;
+    margin-bottom:10px;
+  }
+  .pillar-card p{
+    color:var(--ink-soft);
+    line-height:1.65;
+    font-size:0.95rem;
+    margin:0;
+  }
+
+  /* ---------- Benefits (dark) ---------- */
+  .benefits-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+    max-width:680px;
+    margin:0 auto;
+  }
+  .benefit-row{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    padding:16px 18px;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(230,196,139,0.18);
+    border-radius:14px;
+  }
+  .benefit-row svg{
+    flex-shrink:0;
+    width:22px;height:22px;
+    color:var(--gold-light);
+    margin-top:2px;
+  }
+  .benefit-row span{
+    font-size:0.98rem;
+    line-height:1.55;
+    color:#F0E4EE;
+  }
+  .closing-line{
+    text-align:center;
+    margin-top:38px;
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+    font-size:1.2rem;
+    color:var(--gold-light);
+    max-width:44ch;
+    margin-inline:auto;
+  }
+  .center-cta{
+    display:flex;
+    justify-content:center;
+    margin-top:34px;
+  }
+
+  /* ---------- Chapters ---------- */
+  .chapters{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    border-top:1px solid var(--line);
+  }
+  .chapter{
+    display:grid;
+    grid-template-columns:64px 1fr;
+    gap:22px;
+    padding-block:26px;
+    border-bottom:1px solid var(--line);
+    align-items:start;
+  }
+  .chapter-num{
+    font-family:'Playfair Display',serif;
+    font-weight:700;
+    font-size:1.6rem;
+    color:var(--gold);
+    font-variant-numeric:tabular-nums;
+  }
+  .chapter h3{
+    font-size:1.1rem;
+    margin-bottom:6px;
+  }
+  .chapter p{
+    margin:0;
+    color:var(--ink-soft);
+    line-height:1.65;
+    font-size:0.95rem;
+    max-width:62ch;
+  }
+  .chapter-extra{
+    margin-top:22px;
+    padding:18px 20px;
+    border-radius:14px;
+    background:var(--cream-2);
+    border:1px dashed var(--gold);
+    font-size:0.92rem;
+    color:var(--ink-soft);
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .chapter-extra svg{flex-shrink:0;width:22px;height:22px;color:var(--wine);}
+
+  /* ---------- Before/After ---------- */
+  .compare{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+  }
+  .compare-card{
+    border-radius:18px;
+    padding:30px 28px;
+  }
+  .compare-card.before{
+    background:#fff;
+    border:1px solid var(--line);
+  }
+  .compare-card.after{
+    background:linear-gradient(160deg, var(--purple), var(--purple-deep));
+    color:#F3E9F7;
+  }
+  .compare-label{
+    font-size:0.75rem;
+    font-weight:700;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+  }
+  .compare-card.before .compare-label{color:var(--wine);}
+  .compare-card.after .compare-label{color:var(--gold-light);}
+  .compare-card ul{
+    list-style:none;
+    margin:18px 0 0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .compare-card li{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    font-size:0.96rem;
+    line-height:1.55;
+  }
+  .compare-card.before li{color:var(--ink-soft);}
+  .compare-card.after li{color:#EBDDF0;}
+  .compare-card li svg{flex-shrink:0;width:18px;height:18px;margin-top:2px;}
+  .compare-card.before li svg{color:var(--wine);}
+  .compare-card.after li svg{color:var(--gold-light);}
+
+  /* ---------- Offer ---------- */
+  .offer-wrap{
+    display:flex;
+    justify-content:center;
+  }
+  .offer-card{
+    max-width:620px;
+    width:100%;
+    background:#fff;
+    border:1px solid var(--gold-light);
+    border-radius:24px;
+    padding:44px;
+    box-shadow:0 30px 60px -30px rgba(122,18,32,0.35);
+    position:relative;
+  }
+  .offer-ribbon{
+    position:absolute;
+    top:-14px;
+    right:28px;
+    background:var(--wine);
+    color:#FBF0E4;
+    font-size:0.72rem;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    padding:8px 16px;
+    border-radius:999px;
+    box-shadow:0 8px 18px -6px rgba(122,18,32,0.5);
+  }
+  .offer-card h2{font-size:1.7rem;}
+  .offer-card .lead-sub{
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+    color:var(--wine);
+    margin-top:8px;
+    font-size:1.05rem;
+  }
+  .offer-list{
+    list-style:none;
+    margin:26px 0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .offer-list li{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    font-size:0.95rem;
+    line-height:1.55;
+    color:var(--ink-soft);
+  }
+  .offer-list li svg{flex-shrink:0;width:19px;height:19px;color:var(--wine);margin-top:2px;}
+  .price-block{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    padding:20px 0;
+    border-top:1px dashed var(--line);
+    border-bottom:1px dashed var(--line);
+    margin-bottom:26px;
+  }
+  .price-old{
+    font-size:1.1rem;
+    color:var(--ink-soft);
+    text-decoration:line-through;
+    font-variant-numeric:tabular-nums;
+  }
+  .price-new{
+    font-family:'Playfair Display',serif;
+    font-weight:900;
+    font-size:2.4rem;
+    color:var(--wine);
+    font-variant-numeric:tabular-nums;
+  }
+  .price-tag{
+    font-size:0.72rem;
+    font-weight:700;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    background:var(--cream-2);
+    color:var(--gold-dark);
+    padding:6px 10px;
+    border-radius:999px;
+    margin-left:auto;
+    white-space:nowrap;
+  }
+  .offer-note{
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    line-height:1.6;
+    margin-top:18px;
+    text-align:center;
+  }
+  .guarantee{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:22px;
+    padding:16px 18px;
+    border-radius:14px;
+    background:var(--cream-2);
+  }
+  .guarantee svg{flex-shrink:0;width:30px;height:30px;color:var(--wine);}
+  .guarantee p{margin:0;font-size:0.85rem;color:var(--ink-soft);line-height:1.55;}
+  .guarantee strong{color:var(--ink);}
+
+  /* ---------- FAQ ---------- */
+  .faq{
+    max-width:760px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .faq details{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:6px 22px;
+  }
+  .faq summary{
+    cursor:pointer;
+    padding:16px 0;
+    font-weight:700;
+    font-size:0.98rem;
+    list-style:none;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary .chev{
+    flex-shrink:0;
+    width:18px;height:18px;
+    color:var(--wine);
+    transition:transform 0.2s ease;
+  }
+  .faq details[open] summary .chev{transform:rotate(180deg);}
+  .faq p{
+    margin:0 0 18px;
+    color:var(--ink-soft);
+    line-height:1.65;
+    font-size:0.92rem;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--purple-ink);
+    color:#CDBBD5;
+    padding-block:40px;
+    text-align:center;
+  }
+  footer .brand{color:#F3E9F7;justify-content:center;}
+  footer p{
+    font-size:0.8rem;
+    line-height:1.7;
+    max-width:56ch;
+    margin:16px auto 0;
+    color:#B7A6C0;
+  }
+  footer a.foot-link{
+    color:var(--gold-light);
+    text-decoration:underline;
+    font-weight:600;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .hero-visual{order:-1;max-width:280px;margin:0 auto;}
+    .pillars{grid-template-columns:1fr;}
+    .compare{grid-template-columns:1fr;}
+    .chapter{grid-template-columns:48px 1fr;}
+    .offer-card{padding:30px 22px;}
+    .price-block{flex-wrap:wrap;}
+    .btn-cta{padding:16px 20px;font-size:0.92rem;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span>MIDEISYS</div>
+    <div class="top-note">Pre-lanzamiento · Cupos limitados</div>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Solo por hoy · 75% OFF</span>
+      <h1>Llevas demasiado tiempo esperando que algo cambie.</h1>
+      <p class="lead">El ciclo tóxico termina hoy.</p>
+      <p class="desc">Aprende a identificar los patrones que te retienen, cierra ciclos desde el amor propio y empieza a elegirte a ti.</p>
+      <p class="question">"¿Y si hoy fuera el día en que todo cambia?"</p>
+
+      <div class="badges">
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M14 3v5h5"/></svg>
+          Formato PDF
+        </span>
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg>
+          Método comprobado
+        </span>
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          Últimos días de la oferta
+        </span>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn-cta" href="https://pay.hotmart.com/X102301861R?off=2vc2n32b&checkoutMode=10" target="_blank" rel="noopener">
+          Quiero leerlo con 75% OFF
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <span class="btn-sub">Acceso inmediato y de por vida · Disponible en toda Latinoamérica</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <svg viewBox="0 0 360 420" width="100%" role="img" aria-label="Ilustración de un libro titulado El Ciclo Tóxico Termina Aquí, con un anillo dorado que simboliza el ciclo roto">
+        <g class="ring-orbit">
+          <circle cx="180" cy="200" r="168" fill="none" stroke="#E7C48B" stroke-opacity="0.28" stroke-width="1.5" stroke-dasharray="2 10"/>
+        </g>
+        <circle cx="180" cy="200" r="140" fill="none" stroke="#E7C48B" stroke-opacity="0.35" stroke-width="1"/>
+        <!-- broken ring -->
+        <path d="M180 78 A122 122 0 1 1 91 150" fill="none" stroke="#C08A3E" stroke-width="3" stroke-linecap="round"/>
+        <path d="M108 132 A122 122 0 0 0 180 322" fill="none" stroke="#C08A3E" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+        <!-- book -->
+        <g transform="translate(96,120)">
+          <rect x="0" y="0" width="168" height="216" rx="6" fill="#4B0A12"/>
+          <rect x="0" y="0" width="168" height="216" rx="6" fill="url(#coverGrad)"/>
+          <rect x="0" y="0" width="10" height="216" rx="3" fill="#3A0810" opacity="0.7"/>
+          <rect x="18" y="24" width="132" height="1.5" fill="#E7C48B" opacity="0.6"/>
+          <rect x="18" y="188" width="132" height="1.5" fill="#E7C48B" opacity="0.6"/>
+          <text x="84" y="86" text-anchor="middle" font-family="Playfair Display, serif" font-size="17" font-weight="700" fill="#FBF2E2">EL CICLO</text>
+          <text x="84" y="112" text-anchor="middle" font-family="Playfair Display, serif" font-size="17" font-weight="700" fill="#FBF2E2">TÓXICO</text>
+          <text x="84" y="138" text-anchor="middle" font-family="Playfair Display, serif" font-size="17" font-weight="700" fill="#E7C48B">TERMINA AQUÍ</text>
+          <text x="84" y="168" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="9" letter-spacing="2" fill="#DCC9E4">GUÍA DE SANACIÓN EMOCIONAL</text>
+        </g>
+        <defs>
+          <linearGradient id="coverGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#3B1E73"/>
+            <stop offset="1" stop-color="#241246"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PILLARS ============ -->
+<section class="section section-cream">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="kicker">Lo que encontrarás dentro</span>
+      <h2>¿Qué lograrás con la lectura de este libro?</h2>
+    </div>
+    <div class="pillars">
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.35-9.5-8.5C1 9 2.5 5.5 6 5c2-.3 3.9.8 6 3 2.1-2.2 4-3.3 6-3 3.5.5 5 4 3.5 7.5C19 16.65 12 21 12 21z"/></svg>
+        </div>
+        <span class="pillar-num">01</span>
+        <h3>Reconoce tus heridas del alma</h3>
+        <p>Comprende de dónde nacen los patrones que te atan, y cómo cerrar ciclos con compasión, sin romperte a ti misma.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+        </div>
+        <span class="pillar-num">02</span>
+        <h3>Sana el vínculo contigo misma</h3>
+        <p>Deja de buscar afuera lo que solo puede florecer dentro de ti. Cultiva amor propio, sin depender de lo que ya se fue.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/><path d="M4 20 20 4"/></svg>
+        </div>
+        <span class="pillar-num">03</span>
+        <h3>Recupera tu libertad emocional</h3>
+        <p>Descubre cómo soltar sin culpa y construir un presente en calma, donde amar no duela y la paz sea tu nueva raíz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BENEFITS ============ -->
+<section class="section section-dark">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="kicker">Resultados reales</span>
+      <h2>Beneficios de leer este libro</h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        <span>Sueltas el apego a esa relación que ya no te suma.</span>
+      </div>
+      <div class="benefit-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        <span>Fortaleces tu autoestima y tu poder interior.</span>
+      </div>
+      <div class="benefit-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        <span>Transformas el dolor en crecimiento consciente.</span>
+      </div>
+      <div class="benefit-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        <span>Recuperas la confianza en ti y en tus decisiones.</span>
+      </div>
+      <div class="benefit-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        <span>Aprendes a amar con equilibrio y libertad.</span>
+      </div>
+    </div>
+    <p class="closing-line">Tu transformación comienza hoy: suelta, sana y recuérdate poderosa.</p>
+    <div class="center-cta">
+      <a class="btn-cta" href="https://pay.hotmart.com/X102301861R?off=2vc2n32b&checkoutMode=10" target="_blank" rel="noopener">
+        Quiero empezar mi sanación
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTERS ============ -->
+<section class="section section-cream">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Índice del libro</span>
+      <h2>Descubre el contenido del ebook</h2>
+    </div>
+    <div class="chapters">
+      <div class="chapter">
+        <span class="chapter-num">01</span>
+        <div>
+          <h3>El ciclo que no ves</h3>
+          <p>Antes de soltar algo, necesitas reconocerlo. El primer paso no es el más cómodo, pero sí el más transformador: ver el patrón con claridad.</p>
+        </div>
+      </div>
+      <div class="chapter">
+        <span class="chapter-num">02</span>
+        <div>
+          <h3>Las heridas que no nombramos</h3>
+          <p>Detrás de cada patrón que se repite hay una herida que no ha sido vista. Nombrarla no te hace vulnerable: te hace libre.</p>
+        </div>
+      </div>
+      <div class="chapter">
+        <span class="chapter-num">03</span>
+        <div>
+          <h3>Por qué nos quedamos</h3>
+          <p>La lógica del dolor crónico: por qué el cerebro prefiere lo conocido aunque duela, y cómo el miedo nos ancla a lo que nos destruye.</p>
+        </div>
+      </div>
+      <div class="chapter">
+        <span class="chapter-num">04</span>
+        <div>
+          <h3>Soltar sin culpa</h3>
+          <p>Soltar no significa olvidar. Significa dejar de cargar algo que ya no te corresponde llevar.</p>
+        </div>
+      </div>
+      <div class="chapter">
+        <span class="chapter-num">05</span>
+        <div>
+          <h3>Construyendo un nuevo patrón</h3>
+          <p>Sanar no es llegar a un destino. Es aprender a elegir diferente, una vez y otra vez, hasta que lo nuevo se vuelva hogar.</p>
+        </div>
+      </div>
+      <div class="chapter">
+        <span class="chapter-num">06</span>
+        <div>
+          <h3>El cierre que sana</h3>
+          <p>Cerrar un ciclo no es una derrota. Es la prueba más concreta de que has elegido vivir desde un lugar diferente.</p>
+        </div>
+      </div>
+    </div>
+    <div class="chapter-extra">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14.5"/><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/></svg>
+      <span>Incluye además un cuaderno de anexo con actividades guiadas para acompañar cada capítulo.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEFORE / AFTER ============ -->
+<section class="section section-parchment">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="kicker">Tu proceso</span>
+      <h2>Del dolor a la libertad: tu transformación en pocos días</h2>
+    </div>
+    <div class="compare">
+      <div class="compare-card before">
+        <span class="compare-label">Antes del libro</span>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>Aferrada a lo que ya no te da paz.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>Repitiendo ciclos que te desgastan.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>Temiendo quedarte sola.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>Buscando respuestas donde ya no hay conexión.</li>
+        </ul>
+      </div>
+      <div class="compare-card after">
+        <span class="compare-label">Después del libro</span>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Aceptas tu proceso con serenidad.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Decides desde el amor y no desde el miedo.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Te eliges a ti sin sentir culpa.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Encuentras paz en tu propio camino.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFFER ============ -->
+<section class="section section-cream" id="oferta">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="kicker">Pre-lanzamiento · Primeras 50 personas</span>
+      <h2>Solo por hoy y hasta agotar copias</h2>
+      <p>Este libro está en fase de pre-lanzamiento. Por eso, las primeras 50 personas pueden acceder a esta oferta especial.</p>
+    </div>
+    <div class="offer-wrap">
+      <div class="offer-card">
+        <span class="offer-ribbon">75% OFF</span>
+        <h2>El Ciclo Tóxico Termina Aquí</h2>
+        <p class="lead-sub">Inicia tu viaje hacia la libertad emocional.</p>
+        <ul class="offer-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Guía paso a paso para reconocer tus heridas del amor.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Técnicas para soltar sin dolor ni culpa.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Ejercicios de conexión interior y amor propio.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Estrategias para cerrar ciclos desde la conciencia.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Plan de renacimiento para volver a ti con claridad y calma.</li>
+        </ul>
+        <div class="price-block">
+          <span class="price-old">$75 USD</span>
+          <span class="price-new">$9 USD</span>
+          <span class="price-tag">Hoy 75% OFF</span>
+        </div>
+        <a class="btn-cta btn-block" href="https://pay.hotmart.com/X102301861R?off=2vc2n32b&checkoutMode=10" target="_blank" rel="noopener">
+          Sí, quiero transformar mi vida hoy
+        </a>
+        <p class="offer-note">Disponible para cualquier país de Latinoamérica. Acceso inmediato y de por vida + obsequio especial.</p>
+        <div class="guarantee">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+          <p><strong>Garantía de satisfacción de 7 días.</strong> Léelo, aplícalo y si no cumple tus expectativas, solicita la devolución completa. (Aplican Términos y Condiciones de Hotmart).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section section-parchment">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="kicker">Antes de comprar</span>
+      <h2>Preguntas frecuentes</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>¿Cuál es el precio en la moneda de mi país?
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <p>Mostramos el precio en dólares porque es una referencia fácil de entender en toda Latinoamérica. Al hacer clic en "comprar" verás el valor exacto convertido a la moneda de tu país antes de confirmar el pago.</p>
+      </details>
+      <details>
+        <summary>¿Cómo llega el libro después de comprar?
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <p>Después de tu compra en Hotmart recibirás un correo con el enlace de descarga inmediata del libro en formato PDF, para leerlo desde tu celular, tablet o computador al instante.</p>
+      </details>
+      <details>
+        <summary>¿Puedo acceder al libro desde cualquier dispositivo?
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <p>Sí, podrás acceder desde cualquier dispositivo —celular, tablet o computador— siempre que tengas conexión a internet para descargarlo y leerlo cuando quieras.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span>MIDEISYS</div>
+    <p>© 2026 Mideisys. Este producto se ofrece a través de Hotmart, con pago 100% seguro y garantía de satisfacción.
+      <br><a class="foot-link" href="https://pay.hotmart.com/X102301861R?off=2vc2n32b&checkoutMode=10" target="_blank" rel="noopener">Quiero mi ejemplar con 75% OFF →</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
