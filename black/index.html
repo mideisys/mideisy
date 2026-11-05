@@ -16,8 +16,8 @@
 <meta property="og:url" content="https://ebook.mideisys.com/black/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%234A2116'/%3E%3Ccircle cx='32' cy='32' r='11' fill='%23D1964F'/%3E%3C/svg%3E">
-<link rel="preload" as="image" href="/black/assets/hero-m.webp" media="(max-width: 860px)" type="image/webp">
-<link rel="preload" as="image" href="/black/assets/hero.webp" media="(min-width: 861px)" type="image/webp">
+<link rel="preload" as="image" href="/black/assets/hero-bf-m.webp" media="(max-width: 860px)" type="image/webp">
+<link rel="preload" as="image" href="/black/assets/hero-bf.webp" media="(min-width: 861px)" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&family=Poppins:wght@600;700;800&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
@@ -228,7 +228,7 @@
   .hero-art::before{inset:-2% -2%;border:1.5px solid rgba(209,150,79,.55);}
   .hero-art::after{inset:-10% -7%;border:1.5px dashed rgba(209,150,79,.45);animation:spin 80s linear infinite;}
   @keyframes spin{to{transform:rotate(360deg);}}
-  .hero-art img{position:relative;z-index:1;width:108%;max-width:none;filter:drop-shadow(0 30px 30px rgba(74,33,22,.22));}
+  .hero-art img{position:relative;z-index:1;width:104%;max-width:none;filter:drop-shadow(0 30px 30px rgba(74,33,22,.22));}
   .orb{position:absolute;border-radius:50%;background:radial-gradient(circle at 35% 30%,#F4D3A0,var(--gold));box-shadow:0 8px 18px -6px rgba(138,85,5,.6);}
   .orb--a{width:22px;height:22px;top:9%;left:12%;z-index:2;}
   .orb--b{width:12px;height:12px;bottom:18%;right:6%;z-index:2;}
@@ -607,8 +607,8 @@
   .bf-note b{color:var(--terracotta);font-weight:700;}
 
   .burst{
-    position:absolute;z-index:3;top:-3%;right:-4%;
-    width:clamp(108px,17vw,152px);aspect-ratio:1;display:grid;place-items:center;
+    position:absolute;z-index:3;bottom:2%;right:0;
+    width:clamp(92px,14vw,132px);aspect-ratio:1;display:grid;place-items:center;
     color:var(--bf-black);transform:rotate(9deg);animation:bfBurst 4.5s ease-in-out infinite;
     filter:drop-shadow(0 16px 18px rgba(74,33,22,.35));
   }
@@ -725,18 +725,14 @@ fbq('track', 'PageView');
       <svg class="leaf leaf--a" aria-hidden="true"><use href="#i-leaf"/></svg>
       <svg class="leaf leaf--b" aria-hidden="true"><use href="#i-leaf"/></svg>
       <span class="orb orb--a"></span><span class="orb orb--b"></span>
-      <img src="/black/assets/hero.webp"
-           srcset="/black/assets/hero-m.webp 800w, /black/assets/hero.webp 1300w"
-           sizes="(max-width: 860px) 100vw, 650px"
-           width="1300" height="879" fetchpriority="high"
-           alt="Ebook «Termina YA con ese ciclo tóxico» de Mideisy S. en versión libro impreso, tablet y celular">
+      <img src="/black/assets/hero-bf.webp"
+           srcset="/black/assets/hero-bf-m.webp 760w, /black/assets/hero-bf.webp 1200w"
+           sizes="(max-width: 860px) 100vw, 620px"
+           width="1200" height="1155" fetchpriority="high"
+           alt="Ebook «Termina YA con ese ciclo tóxico» de Mideisy S. en libro, tablet y celular, con un regalo especial de Black Friday">
       <div class="burst" aria-label="Menos 75 por ciento, Black Friday">
         <svg viewBox="0 0 100 100" aria-hidden="true"><defs><radialGradient id="bfBurstG" cx="35%" cy="28%" r="80%"><stop offset="0" stop-color="#FFF3B8"/><stop offset=".55" stop-color="#F5C73F"/><stop offset="1" stop-color="#D9A21B"/></radialGradient></defs><polygon fill="url(#bfBurstG)" stroke="#7A5A06" stroke-width=".8" stroke-linejoin="round" points="50.0,1.0 55.8,9.4 63.8,3.0 67.0,12.7 76.5,8.8 76.8,19.0 87.0,17.9 84.5,27.8 94.6,29.6 89.3,38.4 98.5,43.0 91.0,50.0 98.5,57.0 89.3,61.6 94.6,70.4 84.5,72.2 87.0,82.1 76.8,81.0 76.5,91.2 67.0,87.3 63.8,97.0 55.8,90.6 50.0,99.0 44.2,90.6 36.2,97.0 33.0,87.3 23.5,91.2 23.2,81.0 13.0,82.1 15.5,72.2 5.4,70.4 10.7,61.6 1.5,57.0 9.0,50.0 1.5,43.0 10.7,38.4 5.4,29.6 15.5,27.8 13.0,17.9 23.2,19.0 23.5,8.8 33.0,12.7 36.2,3.0 44.2,9.4"/></svg>
-        <div class="burst__txt"><b>-75%</b><span>Black Friday</span></div>
-      </div>
-      <div class="chip">
-        <span class="chip__ico"><svg class="ico"><use href="#i-file"/></svg></span>
-        <span><b>Ebook en PDF</b><small>Descarga inmediata</small></span>
+        <div class="burst__txt"><b>-75%</b><span>OFF hoy</span></div>
       </div>
     </div>
 
